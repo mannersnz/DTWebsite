@@ -10,7 +10,7 @@
 
 /* Design Tokens */
 :root {
-  /* Colors - Dark base with electric accent */
+  /* Colors - Dark base with brand accent */
   --color-base: #0a0a0a;
   --color-surface: #141414;
   --color-surface-elevated: #1a1a1a;
@@ -19,14 +19,15 @@
   --color-text-secondary: #a0a0a0;
   --color-text-muted: #666666;
 
-  /* Accent - Electric Teal */
-  --color-accent: #00ffcc;
-  --color-accent-dim: #00cc99;
-  --color-accent-glow: rgba(0, 255, 204, 0.15);
-  --color-accent-intense: rgba(0, 255, 204, 0.4);
+  /* Accent - Brand Cyan (from logo) */
+  --color-accent: #22d3ee;
+  --color-accent-dim: #06b6d4;
+  --color-accent-glow: rgba(34, 211, 238, 0.15);
+  --color-accent-intense: rgba(34, 211, 238, 0.4);
 
-  /* Secondary accent */
-  --color-secondary: #ff6b35;
+  /* Secondary accent - Brand Purple (from logo) */
+  --color-secondary: #8b5cf6;
+  --color-secondary-glow: rgba(139, 92, 246, 0.15);
 
   /* Typography */
   --font-display: 'Syne', sans-serif;
@@ -59,14 +60,14 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-accent) 0%, #00ffaa 50%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-warm {
-  background: linear-gradient(135deg, var(--color-secondary) 0%, #ff8f5a 100%);
+  background: linear-gradient(135deg, #a855f7 0%, var(--color-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
