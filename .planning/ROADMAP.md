@@ -31,7 +31,7 @@ None
 **Plans**: TBD
 
 Plans:
-- [ ] 01-01: Project scaffolding and tech stack setup
+- [x] 01-01: Project scaffolding and tech stack setup
 - [ ] 01-02: Base layout with header, footer, logo integration
 
 ### Phase 2: Homepage
@@ -91,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
+| 1. Foundation | 1/2 | In progress | - |
 | 2. Homepage | 0/2 | Not started | - |
 | 3. Services | 0/2 | Not started | - |
 | 4. About & Trust | 0/2 | Not started | - |
