@@ -1,0 +1,53 @@
+---
+interface Service {
+  icon: string;
+  headline: string;
+  description: string;
+  targetAudience: string;
+}
+
+const services: Service[] = [
+  {
+    icon: "🎯",
+    headline: "AI Strategy Sessions",
+    description: "Discover where AI can make the biggest impact in your business. We'll identify quick wins and create a practical roadmap tailored to your goals.",
+    targetAudience: "Perfect for: Business owners starting their AI journey"
+  },
+  {
+    icon: "🎓",
+    headline: "AI Tool Training",
+    description: "Get your team confident with AI tools like ChatGPT, Copilot, and more. Hands-on workshops focused on your actual workflows.",
+    targetAudience: "Perfect for: Teams ready to boost productivity"
+  },
+  {
+    icon: "🚀",
+    headline: "AI Implementation",
+    description: "From pilot to production. We'll help you integrate AI tools into your existing processes with minimal disruption.",
+    targetAudience: "Perfect for: Businesses ready to scale AI adoption"
+  }
+];
+---
+
+<section class="bg-gray-50 py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        How We Can Help
+      </h2>
+      <p class="text-lg text-gray-600">
+        From strategy to implementation, we've got you covered
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{service.headline}</h3>
+          <p class="text-gray-600 mb-4">{service.description}</p>
+          <p class="text-sm text-blue-600 font-medium">{service.targetAudience}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
