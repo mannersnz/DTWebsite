@@ -1,0 +1,10 @@
+Digital Tempo Logo Placeholder
+==============================
+
+Place the Digital Tempo horizontal logo here:
+  Filename: digital_tempo_horizontal_small.png
+
+Source: Download from existing www.digitaltempo.nz website
+        or from Squarespace asset library.
+
+Usage: This logo will be used in the site header and footer.
