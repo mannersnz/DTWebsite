@@ -1,0 +1,68 @@
+---
+interface TrustElement {
+  icon: string;
+  headline: string;
+  description: string;
+}
+
+const trustElements: TrustElement[] = [
+  {
+    icon: "⚖️",
+    headline: "Vendor-Agnostic",
+    description: "We recommend what works for you, not what earns us commissions. No vendor lock-in, no hidden agendas."
+  },
+  {
+    icon: "💼",
+    headline: "Practical Experience",
+    description: "Years of IT consulting experience means we understand business realities, not just technology possibilities."
+  },
+  {
+    icon: "🇳🇿",
+    headline: "Local Understanding",
+    description: "Based in New Zealand, we know the local business landscape and work in your timezone."
+  }
+];
+---
+
+<section class="bg-white py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Left Column - The Story -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          About Digital Tempo
+        </h2>
+        <p class="text-lg text-blue-600 font-medium mb-6">
+          Your trusted AI advisor
+        </p>
+        <div class="prose prose-lg text-gray-600 space-y-4">
+          <p>
+            Digital Tempo has been helping New Zealand businesses navigate technology
+            for years. Now, we're focused on what matters most: helping you harness
+            the power of AI tools to work smarter, not harder.
+          </p>
+          <p>
+            We're not here to sell you complex AI systems or research projects.
+            We're here to show you practical ways to use AI tools like ChatGPT,
+            Copilot, and others to get real results — quickly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column - Trust Elements -->
+      <div class="space-y-6">
+        {trustElements.map((element) => (
+          <div class="bg-gray-50 rounded-xl p-6 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl">{element.icon}</div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{element.headline}</h3>
+                <p class="text-gray-600">{element.description}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
