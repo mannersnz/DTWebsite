@@ -60,8 +60,7 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 04-01: About section with company story and approach
-- [ ] 04-02: Trust elements (vendor-agnostic, NZ-focused messaging)
+- [ ] 04-01: About section with company story and trust elements
 
 ### Phase 5: Contact & CTA
 **Goal**: Enable easy contact with clear calls-to-action throughout the site
@@ -93,6 +92,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 1. Foundation | 2/2 | Complete | 2026-01-15 |
 | 2. Homepage | 2/2 | Complete | 2026-01-15 |
 | 3. Services | 1/1 | Complete | 2026-01-15 |
-| 4. About & Trust | 0/2 | Not started | - |
+| 4. About & Trust | 0/1 | Not started | - |
 | 5. Contact & CTA | 0/2 | Not started | - |
 | 6. Polish & Launch | 0/2 | Not started | - |
