@@ -51,8 +51,7 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 03-01: Services section layout with three service cards
-- [ ] 03-02: Individual service detail content
+- [ ] 03-01: Services section with three service cards and descriptions
 
 ### Phase 4: About & Trust
 **Goal**: Tell the Digital Tempo story and establish credibility for AI consulting pivot
@@ -93,7 +92,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-01-15 |
 | 2. Homepage | 2/2 | Complete | 2026-01-15 |
-| 3. Services | 0/2 | Not started | - |
+| 3. Services | 0/1 | Not started | - |
 | 4. About & Trust | 0/2 | Not started | - |
 | 5. Contact & CTA | 0/2 | Not started | - |
 | 6. Polish & Launch | 0/2 | Not started | - |
