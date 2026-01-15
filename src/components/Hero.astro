@@ -1,0 +1,35 @@
+---
+interface Props {
+  headline?: string;
+  subheadline?: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  headline = "Get Your Business AI-Ready",
+  subheadline = "Practical AI consulting for NZ businesses — quick wins, not long projects",
+  ctaText = "Book a Free Consultation",
+  ctaHref = "#contact"
+} = Astro.props;
+---
+
+<section class="bg-gradient-to-br from-slate-50 to-blue-50 py-20 md:py-32">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+      {headline}
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
+      {subheadline}
+    </p>
+    <a
+      href={ctaHref}
+      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg"
+    >
+      {ctaText}
+    </a>
+    <p class="mt-8 text-sm text-gray-500">
+      Your trusted AI advisor for the New Zealand market
+    </p>
+  </div>
+</section>
