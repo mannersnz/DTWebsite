@@ -1,23 +1,57 @@
 ---
-// Header component with Digital Tempo branding
+// Header - Bold geometric navigation
 ---
 
-<header class="sticky top-0 z-50 bg-white shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 py-4">
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[var(--color-base)]/80 border-b border-[var(--color-border)]">
+  <div class="max-w-7xl mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo / Brand -->
-      <a href="/" class="flex items-center text-gray-900 hover:text-gray-700 transition-colors">
-        <img
-          src="/images/digital_tempo_horizontal - small.png"
-          alt="Digital Tempo"
-          class="h-10"
-        />
+      <a href="/" class="group flex items-center gap-4">
+        <!-- Tempo Wave Animation -->
+        <div class="tempo-wave">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-xl tracking-tight text-white group-hover:text-[var(--color-accent)] transition-colors duration-300">
+            Digital Tempo
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+            AI Consulting
+          </span>
+        </div>
       </a>
 
-      <!-- Navigation placeholder - will be populated in later phases -->
-      <nav class="hidden md:flex items-center gap-6">
-        <!-- Navigation items will be added here -->
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#services" class="relative font-display text-sm uppercase tracking-wider text-[var(--color-text-secondary)] hover:text-white transition-colors duration-300 group">
+          Services
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-accent)] group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#about" class="relative font-display text-sm uppercase tracking-wider text-[var(--color-text-secondary)] hover:text-white transition-colors duration-300 group">
+          About
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-accent)] group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#contact" class="btn-primary text-sm py-2 px-5">
+          Get Started
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 text-[var(--color-text-secondary)] hover:text-white" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
   </div>
 </header>
+
+<!-- Spacer for fixed header -->
+<div class="h-[72px]"></div>

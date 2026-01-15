@@ -1,41 +1,82 @@
 ---
+// Value Proposition - Bold asymmetric layout with geometric accents
 interface ValuePillar {
-  icon: string;
+  number: string;
   headline: string;
   description: string;
 }
 
 const pillars: ValuePillar[] = [
   {
-    icon: "⚡",
+    number: "01",
     headline: "Quick Wins",
-    description: "See results in weeks, not months. We focus on practical AI tools you can start using today."
+    description: "See tangible results in weeks, not months. We focus on practical AI applications that deliver immediate value to your business."
   },
   {
-    icon: "🔧",
+    number: "02",
     headline: "Practical Focus",
-    description: "No jargon or theory overload. Just hands-on guidance to get your team productive with AI."
+    description: "No theoretical research projects. We implement real AI tools like ChatGPT, Copilot, and automation that your team can use today."
   },
   {
-    icon: "🇳🇿",
-    headline: "NZ-Focused",
-    description: "Based in New Zealand, we understand local business needs and work in your timezone."
+    number: "03",
+    headline: "NZ Context",
+    description: "Based in New Zealand, we understand local business challenges. Same timezone, same market understanding, same goals."
   }
 ];
 ---
 
-<section class="bg-white py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
-      Why Choose Digital Tempo?
-    </h2>
+<section class="relative py-24 md:py-32 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-[var(--color-surface)]"></div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      {pillars.map((pillar) => (
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
-          <div class="text-4xl mb-4">{pillar.icon}</div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">{pillar.headline}</h3>
-          <p class="text-gray-600">{pillar.description}</p>
+  <!-- Diagonal accent -->
+  <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[var(--color-base)] to-transparent"></div>
+
+  <!-- Geometric elements -->
+  <div class="absolute top-1/2 -left-20 w-40 h-40 border border-[var(--color-border)] rotate-45"></div>
+  <div class="absolute bottom-20 right-10 w-20 h-20 bg-[var(--color-accent)]/5"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <!-- Section header -->
+    <div class="mb-16 md:mb-24">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-[var(--color-accent)] font-display text-sm uppercase tracking-[0.3em]">Why Digital Tempo</span>
+        <div class="flex-1 h-[1px] bg-[var(--color-border)]"></div>
+      </div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white max-w-2xl">
+        AI adoption that actually
+        <span class="text-gradient"> works</span>
+      </h2>
+    </div>
+
+    <!-- Pillars grid -->
+    <div class="grid md:grid-cols-3 gap-0 border-t border-l border-[var(--color-border)]">
+      {pillars.map((pillar, index) => (
+        <div class="group relative border-b border-r border-[var(--color-border)] p-8 md:p-10 transition-all duration-500 hover:bg-[var(--color-surface-elevated)]">
+          <!-- Number -->
+          <span class="absolute top-6 right-6 font-display text-6xl font-bold text-[var(--color-border)] group-hover:text-[var(--color-accent)]/20 transition-colors duration-500">
+            {pillar.number}
+          </span>
+
+          <!-- Accent line -->
+          <div class="absolute top-0 left-0 w-0 h-1 bg-[var(--color-accent)] group-hover:w-full transition-all duration-500"></div>
+
+          <!-- Content -->
+          <div class="relative z-10">
+            <h3 class="font-display font-bold text-2xl text-white mb-4 group-hover:text-[var(--color-accent)] transition-colors duration-300">
+              {pillar.headline}
+            </h3>
+            <p class="text-[var(--color-text-secondary)] leading-relaxed">
+              {pillar.description}
+            </p>
+          </div>
+
+          <!-- Arrow -->
+          <div class="absolute bottom-6 right-6 opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+            <svg class="w-6 h-6 text-[var(--color-accent)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
         </div>
       ))}
     </div>

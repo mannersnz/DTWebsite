@@ -1,62 +1,114 @@
 ---
+// Services - Bold cards with geometric accents
 interface Service {
   icon: string;
   headline: string;
   description: string;
   targetAudience: string;
+  features: string[];
 }
 
 const services: Service[] = [
   {
-    icon: "🎯",
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`,
     headline: "AI Strategy Sessions",
-    description: "Discover where AI can make the biggest impact in your business. We'll identify quick wins and create a practical roadmap tailored to your goals.",
-    targetAudience: "Perfect for: Business owners starting their AI journey"
+    description: "Discover where AI can make the biggest impact. We'll map your workflows, identify quick wins, and create a practical roadmap.",
+    targetAudience: "Business owners starting their AI journey",
+    features: ["Workflow analysis", "Opportunity mapping", "Practical roadmap"]
   },
   {
-    icon: "🎓",
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>`,
     headline: "AI Tool Training",
-    description: "Get your team confident with AI tools like ChatGPT, Copilot, and more. Hands-on workshops focused on your actual workflows.",
-    targetAudience: "Perfect for: Teams ready to boost productivity"
+    description: "Get your team confident with AI tools. Hands-on workshops using ChatGPT, Copilot, and automation tools with your actual workflows.",
+    targetAudience: "Teams ready to boost productivity",
+    features: ["Hands-on workshops", "Real workflow examples", "Ongoing support"]
   },
   {
-    icon: "🚀",
+    icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>`,
     headline: "AI Implementation",
-    description: "From pilot to production. We'll help you integrate AI tools into your existing processes with minimal disruption.",
-    targetAudience: "Perfect for: Businesses ready to scale AI adoption"
+    description: "From pilot to production. We'll integrate AI tools into your existing processes with minimal disruption and maximum impact.",
+    targetAudience: "Businesses ready to scale AI adoption",
+    features: ["Tool integration", "Process automation", "Change management"]
   }
 ];
 ---
 
-<section class="bg-gray-50 py-16 md:py-24">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">
-        How We Can Help
-      </h2>
-      <p class="text-lg text-gray-600">
-        From strategy to implementation, we've got you covered
-      </p>
+<section id="services" class="relative py-24 md:py-32 overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-[var(--color-base)]"></div>
+
+  <!-- Subtle grid -->
+  <div class="absolute inset-0 grid-overlay opacity-20"></div>
+
+  <!-- Glowing accent -->
+  <div class="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-[var(--color-accent)]/5 rounded-full blur-[150px]"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <!-- Section header -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16 md:mb-24">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-[var(--color-accent)] font-display text-sm uppercase tracking-[0.3em]">Services</span>
+          <div class="w-12 h-[1px] bg-[var(--color-accent)]"></div>
+        </div>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-white">
+          Your path to
+          <span class="text-gradient"> AI productivity</span>
+        </h2>
+      </div>
+      <div class="flex items-end">
+        <p class="text-[var(--color-text-secondary)] text-lg max-w-md">
+          From strategy to implementation, we guide you through every step of your AI adoption journey.
+        </p>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-          <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">{service.headline}</h3>
-          <p class="text-gray-600 mb-4">{service.description}</p>
-          <p class="text-sm text-blue-600 font-medium">{service.targetAudience}</p>
+    <!-- Services cards -->
+    <div class="grid lg:grid-cols-3 gap-6">
+      {services.map((service, index) => (
+        <div class="card group">
+          <!-- Icon -->
+          <div class="w-16 h-16 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)] mb-6 group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-base)] transition-all duration-500">
+            <Fragment set:html={service.icon} />
+          </div>
+
+          <!-- Content -->
+          <h3 class="font-display font-bold text-2xl text-white mb-4">
+            {service.headline}
+          </h3>
+          <p class="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
+            {service.description}
+          </p>
+
+          <!-- Features -->
+          <ul class="space-y-2 mb-8">
+            {service.features.map((feature) => (
+              <li class="flex items-center gap-3 text-sm text-[var(--color-text-secondary)]">
+                <svg class="w-4 h-4 text-[var(--color-accent)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <!-- Target audience -->
+          <div class="pt-6 border-t border-[var(--color-border)]">
+            <p class="text-xs uppercase tracking-wider text-[var(--color-text-muted)] mb-1">Perfect for</p>
+            <p class="text-sm text-[var(--color-accent)]">{service.targetAudience}</p>
+          </div>
         </div>
       ))}
     </div>
 
-    <div class="mt-12 text-center">
-      <p class="text-gray-600 mb-4">Not sure which service is right for you?</p>
-      <a
-        href="#contact"
-        class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-      >
+    <!-- CTA -->
+    <div class="mt-16 text-center">
+      <p class="text-[var(--color-text-secondary)] mb-6">Not sure which service is right for you?</p>
+      <a href="#contact" class="btn-outline">
         Let's Figure It Out Together
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
       </a>
     </div>
   </div>

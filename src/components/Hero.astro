@@ -1,35 +1,87 @@
 ---
-interface Props {
-  headline?: string;
-  subheadline?: string;
-  ctaText?: string;
-  ctaHref?: string;
-}
-
-const {
-  headline = "Get Your Business AI-Ready",
-  subheadline = "Practical AI consulting for NZ businesses — quick wins, not long projects",
-  ctaText = "Book a Free Consultation",
-  ctaHref = "#contact"
-} = Astro.props;
+// Hero - Dramatic asymmetric layout with geometric elements
 ---
 
-<section class="bg-gradient-to-br from-slate-50 to-blue-50 py-20 md:py-32">
-  <div class="max-w-4xl mx-auto px-4 text-center">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-      {headline}
-    </h1>
-    <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto">
-      {subheadline}
-    </p>
-    <a
-      href={ctaHref}
-      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg"
-    >
-      {ctaText}
-    </a>
-    <p class="mt-8 text-sm text-gray-500">
-      Your trusted AI advisor for the New Zealand market
-    </p>
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+  <!-- Background layers -->
+  <div class="absolute inset-0 bg-[var(--color-base)]"></div>
+
+  <!-- Grid overlay -->
+  <div class="absolute inset-0 grid-overlay opacity-30"></div>
+
+  <!-- Diagonal accent line -->
+  <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[var(--color-accent)]/5 to-transparent"></div>
+
+  <!-- Geometric shapes -->
+  <div class="absolute top-20 right-[15%] w-64 h-64 border border-[var(--color-accent)]/20 rotate-45 animate-float"></div>
+  <div class="absolute bottom-20 right-[25%] w-32 h-32 bg-[var(--color-accent)]/5 rotate-12"></div>
+  <div class="absolute top-1/3 right-[10%] w-2 h-40 bg-gradient-to-b from-[var(--color-accent)] to-transparent"></div>
+
+  <!-- Glowing orb -->
+  <div class="absolute top-1/4 right-[20%] w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[100px]"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+    <div class="max-w-3xl">
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-4 mb-8 opacity-0 animate-slide-up">
+        <div class="w-12 h-[2px] bg-[var(--color-accent)]"></div>
+        <span class="font-display text-sm uppercase tracking-[0.3em] text-[var(--color-accent)]">
+          AI Consulting for NZ
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 opacity-0 animate-slide-up delay-100">
+        <span class="text-white">Set the </span>
+        <span class="text-gradient">Tempo</span>
+        <br />
+        <span class="text-white">for AI Success</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-xl md:text-2xl text-[var(--color-text-secondary)] leading-relaxed mb-12 max-w-xl opacity-0 animate-slide-up delay-200">
+        Practical AI adoption for New Zealand businesses.
+        <span class="text-white">Quick wins in weeks</span>, not complex projects that take months.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-4 opacity-0 animate-slide-up delay-300">
+        <a href="#contact" class="btn-primary">
+          Book Free Consultation
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+        <a href="#services" class="btn-outline">
+          Explore Services
+        </a>
+      </div>
+
+      <!-- Trust signal -->
+      <div class="mt-16 pt-8 border-t border-[var(--color-border)] opacity-0 animate-slide-up delay-400">
+        <p class="text-sm text-[var(--color-text-muted)] mb-4 uppercase tracking-wider">Trusted by NZ businesses for</p>
+        <div class="flex flex-wrap gap-8">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-display font-bold text-white">15+</span>
+            <span class="text-sm text-[var(--color-text-secondary)]">Years in Tech</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-display font-bold text-[var(--color-accent)]">100%</span>
+            <span class="text-sm text-[var(--color-text-secondary)]">Vendor Agnostic</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-display font-bold text-white">NZ</span>
+            <span class="text-sm text-[var(--color-text-secondary)]">Based & Focused</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in delay-500">
+    <span class="text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Scroll</span>
+    <div class="w-[1px] h-12 bg-gradient-to-b from-[var(--color-accent)] to-transparent"></div>
   </div>
 </section>

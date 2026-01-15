@@ -1,32 +1,43 @@
 ---
-// Footer component with contact information
+// Footer - Minimal geometric design
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-800 text-white">
-  <div class="max-w-6xl mx-auto px-4 py-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-      <!-- Contact Information -->
-      <div class="space-y-2">
-        <h3 class="text-lg font-semibold text-white">Get in Touch</h3>
-        <div class="space-y-1 text-gray-300">
-          <p>
-            <a href="mailto:hello@digitaltempo.nz" class="hover:text-white transition-colors">
-              hello@digitaltempo.nz
-            </a>
-          </p>
-          <p>
-            <a href="tel:+6421567119" class="hover:text-white transition-colors">
-              +64 21 567119
-            </a>
-          </p>
+<footer class="relative bg-[var(--color-surface)] border-t border-[var(--color-border)]">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 items-center">
+      <!-- Brand -->
+      <div class="flex items-center gap-4">
+        <div class="tempo-wave" style="height: 24px;">
+          <span style="width: 3px;"></span>
+          <span style="width: 3px;"></span>
+          <span style="width: 3px;"></span>
+          <span style="width: 3px;"></span>
+          <span style="width: 3px;"></span>
         </div>
+        <span class="font-display font-bold text-lg text-white">Digital Tempo</span>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm">
+        <a href="mailto:hello@digitaltempo.nz" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">
+          hello@digitaltempo.nz
+        </a>
+        <span class="text-[var(--color-border)]">|</span>
+        <a href="tel:+6421567119" class="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors">
+          +64 21 567 119
+        </a>
       </div>
 
       <!-- Copyright -->
-      <div class="text-gray-400 text-sm">
-        <p>&copy; {currentYear} Digital Tempo. All rights reserved.</p>
+      <div class="text-right">
+        <p class="text-sm text-[var(--color-text-muted)]">
+          &copy; {currentYear} Digital Tempo
+        </p>
       </div>
     </div>
   </div>
+
+  <!-- Bottom accent line -->
+  <div class="h-1 bg-gradient-to-r from-transparent via-[var(--color-accent)] to-transparent opacity-50"></div>
 </footer>
