@@ -1,0 +1,43 @@
+---
+interface ValuePillar {
+  icon: string;
+  headline: string;
+  description: string;
+}
+
+const pillars: ValuePillar[] = [
+  {
+    icon: "⚡",
+    headline: "Quick Wins",
+    description: "See results in weeks, not months. We focus on practical AI tools you can start using today."
+  },
+  {
+    icon: "🔧",
+    headline: "Practical Focus",
+    description: "No jargon or theory overload. Just hands-on guidance to get your team productive with AI."
+  },
+  {
+    icon: "🇳🇿",
+    headline: "NZ-Focused",
+    description: "Based in New Zealand, we understand local business needs and work in your timezone."
+  }
+];
+---
+
+<section class="bg-white py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+      Why Choose Digital Tempo?
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {pillars.map((pillar) => (
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-100">
+          <div class="text-4xl mb-4">{pillar.icon}</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{pillar.headline}</h3>
+          <p class="text-gray-600">{pillar.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
